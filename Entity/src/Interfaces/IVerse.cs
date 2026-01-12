@@ -1,6 +1,6 @@
 namespace Entities.Interfaces;
 
-public interface IVerseContent
+public interface IVerse
 {
     public Guid Id { get; set; }
     public Guid TranslationId  { get; set; }

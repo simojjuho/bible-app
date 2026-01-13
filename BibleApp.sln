@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{DEFA4213-0AB1-4B5F-A27B-781B0D70D319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{78833015-404E-40A0-90D8-A7A767213B1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{78833015-404E-40A0-90D8-A7A767213B1D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases", "UseCases\UseCases.csproj", "{CA84242E-8505-45D6-8151-A3516919F275}"
 EndProject

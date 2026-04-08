@@ -1,8 +1,8 @@
+using Infrastructure.Database;
 using Infrastructure.Database.Models;
+using Npgsql;
 using Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi;
-using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,13 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddCustomSwagger();
 
-// Add Database:
-var dbDataSource = new NpgsqlDataSourceBuilder(builder.Configuration.GetConnectionString("DefaultConnection"))
-    .Build();
-/*builder.Services.AddDbContext<DatabaseContext>(options =>
-{
-    options.UseNpgsql(dbDataSource);
-});*/
+// Get connection to the database Database:
+var connectionString = DataUtility.GetConnectionString(builder.Configuration);
+
+// Configure database context
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 
